@@ -1,4 +1,4 @@
-<div class="menu">
+<%# <div class="menu">
   <nav class="menu-nav">
     <ul id="gallery-links">
       <!-- ITEM 01 -->
@@ -77,4 +77,10 @@
       </li>
     </ul>
   </nav>
-</div>
+</div> %>
+
+<% @images['resources'].each do |image| %>
+  <div class="image">
+    <%= cl_image_tag(image['public_id']) %>
+  </div>
+<% end %>
