@@ -67,15 +67,13 @@
         <swiper-container init="false"  navigation="true" effect="crossFade" loading="lazy"
                           observer="true" parallax="true" observe-parents="true" loop="true" slides-per-view="1"
                             >
-          <swiper-slide>
-            <div class="swiper-slide">Slide 1</div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="swiper-slide">Slide 2</div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="swiper-slide">Slide 3</div>
-          </swiper-slide>
+            <% @images_clubbing['resources'].each do |image| %>
+              <swiper-slide>
+                <div class="swiper-slide-img">
+                  <%= cl_image_tag(image['public_id'], loading: "lazy") %>
+                </div>
+              </swiper-slide>
+            <% end %>
         </swiper-container>
         <script type="module">
           import { register } from 'swiper/element/bundle';
@@ -155,6 +153,22 @@
                 right: 0 !important;
                 cursor: e-resize !important;
               }
+
+              .swiper-slide-img {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .swiper-slide-img img {
+              display: block !important;
+              width: max-content !important;
+              max-height: 70vh !important;
+              object-fit: cover !important;
+              justify-content: center !important;
+              align-items: center !important;
+            }
               `,
             ],
 
@@ -195,8 +209,3 @@
   </div>
 </section>
 <%# displaying images from a specific folder go see controller %>
-<%# <% @images_clubbing['resources'].each do |image| %>
-  <%# <div class="image"> %>
-    <%# <%= cl_image_tag(image['public_id']) %>
-  <%# </div> %>
-<%# <% end %>
