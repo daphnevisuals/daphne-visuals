@@ -1,0 +1,28 @@
+<header>
+  <div class="home-navbar-line"></div>
+  <div class="home-navbar">
+    <div class="logo">
+          <%= link_to root_path do %>
+          Daphné Visuals
+          <% end %>
+    </div>
+    <div class="navbar-wrapper">
+      <ul>
+        <li>
+          <a class="link link-nav" href="">
+            Développement web | Webdesign</a
+          >
+        </li>
+        <li>
+          <%= link_to photography_path, class:"link link-nav" do %>
+            Photographie
+          <% end %>
+        </li>
+      </ul>
+      <ul class="navbar-right">
+        <li><a class="link link-nav" href="">Info</a></li>
+        <li><a class="link link-nav" href="">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

@@ -12,7 +12,7 @@
 
   <body class="homepage-bg">
 
-      <header>
+    <header>
       <div class="home-navbar-line"></div>
       <div class="home-navbar">
         <div class="logo">
@@ -40,7 +40,6 @@
         </div>
       </div>
     </header>
-    </div>
     <%= yield %>
     <% if request.fullpath == root_path && !session[:preloader_played] %>
         <%= render "shared/preloader" %>
