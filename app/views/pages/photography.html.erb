@@ -67,7 +67,7 @@
         <swiper-container init="false"  navigation="true" effect="crossFade" loading="lazy"
                           observer="true" parallax="true" observe-parents="true" loop="true" slides-per-view="1"
                             >
-            <% @images_clubbing['resources'].each do |image| %>
+            <% @images_mariages['resources'].each do |image| %>
               <swiper-slide>
                 <div class="swiper-slide-img">
                   <%= cl_image_tag(image['public_id'], loading: "lazy") %>
