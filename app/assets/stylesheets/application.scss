@@ -1,0 +1,86 @@
+@import "font-awesome";
+@import "./config.scss";
+@import "./modules/homepage/homepage-bg";
+@import "./modules/homepage/homepage-description";
+@import "./modules/homepage/homepage-tools";
+@import "./modules/homepage/navbar-home";
+@import "./modules/homepage/preloader";
+@import "./modules/navbar";
+@import "./modules/menu/menu";
+
+/* ====================================
+// css variables
+// ==================================== */
+:root {
+  --main-color: #eda994;
+  --black-color: #111111;
+  --grey-color: #bababa;
+}
+
+/* ====================================
+// reset rules
+// ==================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: "NeueMontreal-Light";
+  --cursor-stroke: #000;
+  --cursor-fill: none;
+  --cursor-stroke-width: 1px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+header {
+  padding: 20px 40px;
+  height: 110px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  max-inline-size: 100%;
+  block-size: auto;
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+  list-style-type: none;
+}
+
+.d-none {
+  display: none;
+  opacity: 0;
+}
+
+// @import "swiper/swiper";
+// @import "base";
+// @import "layout";
+// @import "modules/homepage/preloader";
+// @import "modules/homepage/navbar-home";
+// @import "modules/navbar";
+// @import "modules/homepage/homepage-description";
+// @import "modules/homepage/homepage-tools";
+// @import "modules/homepage/homepage-bg";
+// @import "modules/menu/menu";
+// @import "modules/gallery-content/content-navbar";
+// @import "modules/gallery-content/content-wrap";
+// @import "modules/gallery-content/content-menu";
+// @import "modules/gallery-content/content-swiper";

@@ -1,0 +1,19 @@
+.homepage-description {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-family: "Migra-ExtralightItalic";
+    font-weight: 100;
+    font-size: 120px;
+    color: rgba(237, 169, 148, 0.28);
+    letter-spacing: 10px;
+  }
+  p {
+    margin-top: -20px;
+    text-align: center;
+    width: 35%;
+  }
+}
