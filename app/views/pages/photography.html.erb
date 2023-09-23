@@ -63,7 +63,7 @@
       <div class="carousel d-none" data-category="clubbing">
 
       <%# ----- SWIPER CLUBBING CONTAINER ----- %>
-        <swiper-container class="clubbing-swiper" init="false"  navigation="true" effect="crossFade" loading="lazy"
+        <swiper-container init="false" class="clubbing-swiper" init="false"  navigation="true" effect="fade" fade-effect="true" crossFade="true" loading="lazy"
                           observer="true" parallax="true" observe-parents="true" loop="true" slides-per-view="1"
                             >
             <% @images_clubbing['resources'].each do |image| %>
@@ -76,6 +76,7 @@
         </swiper-container>
         <script type="module">
           import { register } from 'swiper/element/bundle';
+
           register();
 
           const swiperEl = document.querySelector('.clubbing-swiper');
@@ -87,6 +88,9 @@
             direction: "horizontal",
             slidesPerView: 1,
             effect: "fade",
+            fadeEffect: {
+              crossFade: true,
+            },
             lazy: true,
             loop: true,
             speed: 1500,
@@ -163,7 +167,7 @@
             ],
 
             // array with CSS urls
-            // injectStylesUrls: ['path/to/one.css', 'path/to/two.css'],
+            injectStylesUrls: ['swiper/element/css/effect-fade'],
           };
           Object.assign(swiperEl, swiperParams, params);
           swiperEl.initialize();
@@ -172,7 +176,7 @@
       <div class="carousel d-none" data-category="mariage">
 
       <%# ----- SWIPER MARIAGE CONTAINER ----- %>
-        <swiper-container class="mariage-swiper" init="false"  navigation="true" effect="crossFade" loading="lazy"
+        <swiper-container init="false" class="mariage-swiper" init="false"  navigation="true" effect="fade" fade-effect="true" crossFade="true" loading="lazy"
                           observer="true" parallax="true" observe-parents="true" loop="true" slides-per-view="1"
                             >
             <% @images_mariages['resources'].each do |image| %>
@@ -200,6 +204,10 @@
             lazy: true,
             loop: true,
             speed: 1500,
+            effect: "fade",
+            fadeEffect: {
+              crossFade: true,
+            },
             on: {
               init() {
                 // ...
@@ -273,7 +281,7 @@
             ],
 
             // array with CSS urls
-            // injectStylesUrls: ['path/to/one.css', 'path/to/two.css'],
+            injectStylesUrls: ['swiper/element/css/effect-fade'],
           };
           Object.assign(swiperEl, swiperParams, params);
           swiperEl.initialize();
@@ -281,13 +289,341 @@
 
       </div>
       <div class="carousel d-none" data-category="portrait">
-        portrait
+        <swiper-container init="false" class="portraits-swiper" init="false"  navigation="true" effect="fade" fade-effect="true" crossFade="true" loading="lazy"
+                    observer="true" parallax="true" observe-parents="true" loop="true" slides-per-view="1"
+                      >
+            <% @images_portraits['resources'].each do |image| %>
+              <swiper-slide>
+                <div class="swiper-slide-img">
+                  <%= cl_image_tag(image['public_id'], loading: "lazy") %>
+                </div>
+              </swiper-slide>
+            <% end %>
+        </swiper-container>
+
+        <script type="module">
+          import { register } from 'swiper/element/bundle';
+          register();
+
+          const swiperEl = document.querySelector('.portraits-swiper');
+            const swiperParams = {
+            observer: true,
+            observeParents: true,
+            parallax: true,
+            loop: true,
+            direction: "horizontal",
+            slidesPerView: 1,
+            effect: "fade",
+            lazy: true,
+            loop: true,
+            speed: 1500,
+            effect: "fade",
+            fadeEffect: {
+              crossFade: true,
+            },
+            on: {
+              init() {
+                // ...
+              },
+            },
+          };
+          const params = {
+            // array with CSS styles
+            injectStyles: [
+              `
+              .swiper {
+                width: 50vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden !important;
+              }
+              .swiper-wrapper {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                overflow: visible;
+              }
+
+              .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-height: 70vh;
+              }
+              .swiper-button-prev,
+              .swiper-button-next {
+                width: 50% !important;
+                height: 100% !important;
+                top: 0 !important;
+                margin: 0 !important;
+                transition: cursor 0.3s !important;
+
+                &::after {
+                  display: none !important;
+                }
+              }
+              .swiper-button-prev svg,
+              .swiper-button-next svg {
+                display: none;
+              }
+
+              .swiper-button-prev {
+                left: 0 !important;
+                cursor: w-resize !important;
+              }
+              .swiper-button-next {
+                right: 0 !important;
+                cursor: e-resize !important;
+              }
+              .swiper-slide-img {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              }
+              .swiper-slide img {
+                display: block !important;
+                width: max-content !important;
+                max-height: 70vh !important;
+                object-fit: cover !important;
+                justify-content: center !important;
+                align-items: center !important;
+              }
+              `,
+            ],
+
+            // array with CSS urls
+            injectStylesUrls: ['swiper/element/css/effect-fade'],
+          };
+          Object.assign(swiperEl, swiperParams, params);
+          swiperEl.initialize();
+        </script>
+
       </div>
       <div class="carousel d-none" data-category="street">
-        Street
+        <swiper-container init="false" class="street-swiper" init="false"  navigation="true" effect="fade" fade-effect="true" crossFade="true" loading="lazy"
+                    observer="true" parallax="true" observe-parents="true" loop="true" slides-per-view="1"
+                      >
+            <% @images_street['resources'].each do |image| %>
+              <swiper-slide>
+                <div class="swiper-slide-img">
+                  <%= cl_image_tag(image['public_id'], loading: "lazy") %>
+                </div>
+              </swiper-slide>
+            <% end %>
+        </swiper-container>
+
+        <script type="module">
+          import { register } from 'swiper/element/bundle';
+          register();
+
+          const swiperEl = document.querySelector('.street-swiper');
+            const swiperParams = {
+            observer: true,
+            observeParents: true,
+            parallax: true,
+            loop: true,
+            direction: "horizontal",
+            slidesPerView: 1,
+            effect: "fade",
+            lazy: true,
+            loop: true,
+            speed: 1500,
+            effect: "fade",
+            fadeEffect: {
+              crossFade: true,
+            },
+            on: {
+              init() {
+                // ...
+              },
+            },
+          };
+          const params = {
+            // array with CSS styles
+            injectStyles: [
+              `
+              .swiper {
+                width: 50vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden !important;
+              }
+              .swiper-wrapper {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                overflow: visible;
+              }
+
+              .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-height: 70vh;
+              }
+              .swiper-button-prev,
+              .swiper-button-next {
+                width: 50% !important;
+                height: 100% !important;
+                top: 0 !important;
+                margin: 0 !important;
+                transition: cursor 0.3s !important;
+
+                &::after {
+                  display: none !important;
+                }
+              }
+              .swiper-button-prev svg,
+              .swiper-button-next svg {
+                display: none;
+              }
+
+              .swiper-button-prev {
+                left: 0 !important;
+                cursor: w-resize !important;
+              }
+              .swiper-button-next {
+                right: 0 !important;
+                cursor: e-resize !important;
+              }
+              .swiper-slide-img {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              }
+              .swiper-slide img {
+                display: block !important;
+                width: max-content !important;
+                max-height: 70vh !important;
+                object-fit: cover !important;
+                justify-content: center !important;
+                align-items: center !important;
+              }
+              `,
+            ],
+
+            // array with CSS urls
+            injectStylesUrls: ['swiper/element/css/effect-fade'],
+          };
+          Object.assign(swiperEl, swiperParams, params);
+          swiperEl.initialize();
+        </script>
       </div>
        <div class="carousel d-none" data-category="animaux">
-        Animaux
+        <swiper-container init="false" class="animaux-swiper" init="false"  navigation="true" effect="fade" fade-effect="true" crossFade="true" loading="lazy"
+                    observer="true" parallax="true" observe-parents="true" loop="true" slides-per-view="1"
+                      >
+            <% @images_animaux['resources'].each do |image| %>
+              <swiper-slide>
+                <div class="swiper-slide-img">
+                  <%= cl_image_tag(image['public_id'], loading: "lazy") %>
+                </div>
+              </swiper-slide>
+            <% end %>
+        </swiper-container>
+
+        <script type="module">
+          import { register } from 'swiper/element/bundle';
+          register();
+
+          const swiperEl = document.querySelector('.animaux-swiper');
+            const swiperParams = {
+            observer: true,
+            observeParents: true,
+            parallax: true,
+            loop: true,
+            direction: "horizontal",
+            slidesPerView: 1,
+            effect: "fade",
+            lazy: true,
+            loop: true,
+            speed: 1500,
+            effect: "fade",
+            fadeEffect: {
+              crossFade: true,
+            },
+            on: {
+              init() {
+                // ...
+              },
+            },
+          };
+          const params = {
+            // array with CSS styles
+            injectStyles: [
+              `
+              .swiper {
+                width: 50vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden !important;
+              }
+              .swiper-wrapper {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                overflow: visible;
+              }
+
+              .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-height: 70vh;
+              }
+              .swiper-button-prev,
+              .swiper-button-next {
+                width: 50% !important;
+                height: 100% !important;
+                top: 0 !important;
+                margin: 0 !important;
+                transition: cursor 0.3s !important;
+
+                &::after {
+                  display: none !important;
+                }
+              }
+              .swiper-button-prev svg,
+              .swiper-button-next svg {
+                display: none;
+              }
+
+              .swiper-button-prev {
+                left: 0 !important;
+                cursor: w-resize !important;
+              }
+              .swiper-button-next {
+                right: 0 !important;
+                cursor: e-resize !important;
+              }
+              .swiper-slide-img {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              }
+              .swiper-slide img {
+                display: block !important;
+                width: max-content !important;
+                max-height: 70vh !important;
+                object-fit: cover !important;
+                justify-content: center !important;
+                align-items: center !important;
+              }
+              `,
+            ],
+
+            // array with CSS urls
+            injectStylesUrls: ['swiper/element/css/effect-fade'],
+          };
+          Object.assign(swiperEl, swiperParams, params);
+          swiperEl.initialize();
+        </script>
       </div>
     </div>
     <div class="content-menu">
