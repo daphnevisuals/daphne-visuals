@@ -53,6 +53,46 @@
     </ul>
   </nav>
 </div>
+
+<section class="content-wrap d-none" data-controller="section-content">
+  <div class="content-nav">
+    <%= render "shared/navbar_white" %>
+  </div>
+  <div class="content-container">
+    <div class="content-caroussel">
+      <div class="carousel d-none" data-category="clubbing">
+        Clubbing
+      </div>
+      <div class="carousel d-none" data-category="mariage">
+        Mariage
+      </div>
+      <div class="carousel d-none" data-category="portrait">
+        portrait
+      </div>
+      <div class="carousel d-none" data-category="street">
+        Street
+      </div>
+       <div class="carousel d-none" data-category="animaux">
+        Animaux
+      </div>
+    </div>
+    <div class="content-menu">
+      <ul class="content-menu__wrapper">
+        <li class="content-menu__link" data-category="clubbing">
+          Clubbing & Festivals
+        </li>
+        <li class="content-menu__link" data-category="mariage">Mariages</li>
+        <li class="content-menu__link" data-category="portrait">
+          Portraits
+        </li>
+        <li class="content-menu__link" data-category="street">
+          Street & Landscapes
+        </li>
+        <li class="content-menu__link" data-category="animaux">Animaux</li>
+      </ul>
+    </div>
+  </div>
+</section>
 <%# displaying images from a specific folder go see controller %>
 <%# <% @images_clubbing['resources'].each do |image| %>
   <%# <div class="image"> %>

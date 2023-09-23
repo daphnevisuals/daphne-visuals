@@ -1,0 +1,22 @@
+.active {
+  color: var(--main-color) !important;
+  font-family: "Migra-Italic" !important;
+  font-size: 20px !important;
+  text-transform: capitalize !important;
+  opacity: 1 !important;
+}
+
+.content-menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.content-menu__link {
+  color: var(--grey-color);
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: lowercase;
+  opacity: 0.8;
+}
