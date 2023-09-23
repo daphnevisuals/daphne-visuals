@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def photography
-    @images = Cloudinary::Api.resources(
+    @images_clubbing = Cloudinary::Api.resources(
       type: 'upload',
       prefix: 'Photography/Clubbing/', # Remplacez par votre dossier Cloudinary
       max_results: 10 # Limitez le nombre d'images affichées si nécessaire

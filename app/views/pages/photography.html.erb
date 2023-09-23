@@ -1,17 +1,12 @@
-<%# <div class="menu">
+<div class="menu" data-controller="menu">
   <nav class="menu-nav">
     <ul id="gallery-links">
       <!-- ITEM 01 -->
       <li>
         <div class="gallery-link" data-category="clubbing">
           <span>Clubbing & Festivals,</span>
-
           <div class="hover-reveal image01">
-            <img
-              class="hidden-img"
-              src="/src/img/menu-photography/menu-nightclub.webp"
-              alt=""
-            />
+            <%= cl_image_tag("Photography/menu/menu-nightclub_bc3esm", class: "hidden-img", loading: "lazy") %>
           </div>
         </div>
       </li>
@@ -20,13 +15,8 @@
       <li>
         <div class="gallery-link" data-category="mariage">
           <span>Mariages,</span>
-
           <div class="hover-reveal image02">
-            <img
-              class="hidden-img"
-              src="/src/img/menu-photography/menu-mariage.webp"
-              alt=""
-            />
+            <%= cl_image_tag("Photography/menu/menu-mariage_qevrbs", class: "hidden-img", loading: "lazy") %>
           </div>
         </div>
       </li>
@@ -35,13 +25,8 @@
       <li>
         <div class="gallery-link" data-category="portrait">
           <span>Portraits,</span>
-
           <div class="hover-reveal image03">
-            <img
-              class="hidden-img"
-              src="/src/img/menu-photography/menu-portraits.webp"
-              alt=""
-            />
+            <%= cl_image_tag("Photography/menu/menu-portraits_aibovw", class: "hidden-img", loading: "lazy") %>
           </div>
         </div>
       </li>
@@ -50,13 +35,8 @@
       <li>
         <div class="gallery-link" data-category="street">
           <span>Street & Landscapes,</span>
-
           <div class="hover-reveal image04">
-            <img
-              class="hidden-img"
-              src="/src/img/menu-photography/menu-street.webp"
-              alt=""
-            />
+            <%= cl_image_tag("Photography/menu/menu-street_otjqrc", class: "hidden-img", loading: "lazy") %>
           </div>
         </div>
       </li>
@@ -65,22 +45,17 @@
       <li>
         <div class="gallery-link" data-category="animaux">
           <span>Animaux</span>
-
           <div class="hover-reveal image04">
-            <img
-              class="hidden-img"
-              src="/src/img/menu-photography/menu-animaux.webp"
-              alt=""
-            />
+            <%= cl_image_tag("Photography/menu/menu-animaux_omgj1y", class: "hidden-img", loading: "lazy") %>
           </div>
         </div>
       </li>
     </ul>
   </nav>
-</div> %>
-
-<% @images['resources'].each do |image| %>
-  <div class="image">
-    <%= cl_image_tag(image['public_id']) %>
-  </div>
-<% end %>
+</div>
+<%# displaying images from a specific folder go see controller %>
+<%# <% @images_clubbing['resources'].each do |image| %>
+  <%# <div class="image"> %>
+    <%# <%= cl_image_tag(image['public_id']) %>
+  <%# </div> %>
+<%# <% end %>
