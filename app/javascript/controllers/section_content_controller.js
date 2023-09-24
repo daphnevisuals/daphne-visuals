@@ -14,12 +14,14 @@ export default class extends Controller {
         const contentProjectWrapper = document.querySelector(
           ".content-wrap.projects"
         );
+        const documentBody = document.querySelector("body");
         console.log(contentProjectWrapper);
         const menu = document.querySelector(".menu");
         menu.classList.add("d-none");
         contentWrapper.classList.remove("d-none");
         contentProjectWrapper.classList.add("content-wrap-projects");
         contentProjectWrapper.classList.remove(".d-none");
+        documentBody.classList.add("black-bg");
         const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
         tl.fromTo(
           ".content-wrap",
