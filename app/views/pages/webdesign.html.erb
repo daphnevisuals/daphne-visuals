@@ -1,1 +1,89 @@
-<h1>Webdesign</h1>
+<div class="menu" data-controller="menu">
+  <nav class="menu-nav">
+    <ul id="gallery-links">
+      <!-- ITEM 01 -->
+      <li>
+        <div class="gallery-link" data-category="farmland">
+          <span>Farmland,</span>
+          <div class="hover-reveal image01">
+            <%= cl_image_tag("Photography/menu/menu-nightclub_bc3esm", class: "hidden-img", loading: "lazy") %>
+          </div>
+        </div>
+      </li>
+
+      <!-- ITEM 02 -->
+      <li>
+        <div class="gallery-link" data-category="noway">
+          <span>No Way,</span>
+          <div class="hover-reveal image02">
+            <%= cl_image_tag("Photography/menu/menu-mariage_qevrbs", class: "hidden-img", loading: "lazy") %>
+          </div>
+        </div>
+      </li>
+
+      <!-- ITEM 03 -->
+      <li>
+        <div class="gallery-link" data-category="mutomuto">
+          <span>MutoMuto,</span>
+          <div class="hover-reveal image03">
+            <%= cl_image_tag("Photography/menu/menu-portraits_aibovw", class: "hidden-img", loading: "lazy") %>
+          </div>
+        </div>
+      </li>
+
+      <!-- ITEM 04 -->
+      <li>
+        <div class="gallery-link" data-category="pikpik">
+          <span>PikPik</span>
+          <div class="hover-reveal image04">
+            <%= cl_image_tag("Photography/menu/menu-street_otjqrc", class: "hidden-img", loading: "lazy") %>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </nav>
+</div>
+
+<section class="content-wrap d-none" data-controller="section-content">
+  <div class="content-nav">
+    <%= render "shared/navbar_white" %>
+  </div>
+  <div class="content-container">
+    <div class="content-caroussel" data-controller="projects">
+
+      <div class="carousel d-none" data-category="farmland">
+      Farmland Content
+      </div>
+
+      <div class="carousel d-none" data-category="noway">
+      No Way content
+      </div>
+
+      <div class="carousel d-none" data-category="mutomuto">
+        Mutomuto content
+      </div>
+
+      <div class="carousel d-none" data-category="pikpik">
+       Pikpik content
+      </div>
+
+    </div>
+    <div class="content-menu">
+      <ul class="content-menu__wrapper">
+        <li class="content-menu__link" data-category="farmland">
+          Farmland
+        </li>
+        <li class="content-menu__link" data-category="noway">No Way</li>
+        <li class="content-menu__link" data-category="mutomuto">
+          MutoMuto
+        </li>
+        <li class="content-menu__link" data-category="pikpik">
+          PikPik
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+<%# displaying images from a specific folder go see controller %>
