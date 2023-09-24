@@ -11,6 +11,7 @@
 @import "./modules/gallery-content/content-navbar";
 @import "./modules/gallery-content/content-swiper";
 @import "./modules/gallery-content/content-wrap";
+@import "./modules/gallery-content/projects-content.scss";
 
 /* ====================================
 // css variables
@@ -70,7 +71,7 @@ li {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
   opacity: 0;
 }
 

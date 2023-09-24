@@ -11,9 +11,15 @@ export default class extends Controller {
     links.forEach((linkItem) => {
       linkItem.addEventListener("click", (e) => {
         const contentWrapper = document.querySelector(".content-wrap");
+        const contentProjectWrapper = document.querySelector(
+          ".content-wrap.projects"
+        );
+        console.log(contentProjectWrapper);
         const menu = document.querySelector(".menu");
         menu.classList.add("d-none");
         contentWrapper.classList.remove("d-none");
+        contentProjectWrapper.classList.add("content-wrap-projects");
+        contentProjectWrapper.classList.remove(".d-none");
         const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
         tl.fromTo(
           ".content-wrap",

@@ -45,7 +45,7 @@
   </nav>
 </div>
 
-<section class="content-wrap d-none" data-controller="section-content">
+<section id="projects" class="content-wrap projects d-none" data-controller="section-content">
   <div class="content-nav">
     <%= render "shared/navbar_white" %>
   </div>
@@ -53,7 +53,15 @@
     <div class="content-caroussel projects" data-controller="projects">
 
       <div class="carousel projects d-none" data-category="farmland">
-      Farmland Content
+        <div class="project-cover">
+          <%= cl_image_tag("web-projects/pikpik/ygewkdvus3q6xeblqzuy") %>
+        </div>
+        <h3>Project-title</h3>
+        <p>Project Description</p>
+        <div class="project-details">Project details here</div>
+        <div class="project-details">Project details here</div>
+        <div class="project-details">Project details here</div>
+        <div class="project-details">Project details here</div>
       </div>
 
       <div class="carousel projects d-none" data-category="noway">
