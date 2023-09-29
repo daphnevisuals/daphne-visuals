@@ -1,13 +1,14 @@
-// .project-cover {
-//   max-width: 60vw;
-// }
+.project-cover {
+  max-width: 60vw;
+}
 
 .content-wrap-projects {
   display: block !important;
+  color: red;
 }
 
 .content-container.projects {
-  align-items: flex-start;
+  align-items: center;
 }
 
 .carousel.projects {
@@ -23,4 +24,5 @@
 
 .content-caroussel.projects {
   margin-top: 60px;
+  width: 60vw;
 }
