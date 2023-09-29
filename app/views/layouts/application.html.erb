@@ -14,7 +14,9 @@
   <body class="homepage-bg">
 
     <%= render "shared/navbar_black" %>
-    <%= yield %>
+    <div class="yielded-content">
+      <%= yield %>
+    </div>
     <% if request.fullpath == root_path && !session[:preloader_played] %>
         <%= render "shared/preloader" %>
         <% session[:preloader_played] = true %>
