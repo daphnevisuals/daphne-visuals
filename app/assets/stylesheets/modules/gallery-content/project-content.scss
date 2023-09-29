@@ -1,0 +1,30 @@
+.project-cover {
+  max-width: 60vw;
+}
+
+.content-wrap-projects {
+  display: block !important;
+}
+
+.content-container.projects {
+  align-items: flex-start;
+  max-width: 60vw;
+}
+
+.carousel.projects {
+  margin-left: 0;
+}
+
+.content-menu.projects {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+}
+
+.content-caroussel.projects {
+  margin-top: 60px;
+}
+
+.project-details {
+  font-size: 12px;
+}
