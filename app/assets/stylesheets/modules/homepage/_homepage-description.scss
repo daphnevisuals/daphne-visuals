@@ -1,5 +1,11 @@
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
 .homepage-description {
-  margin-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -2,6 +2,10 @@
   max-width: 60vw;
 }
 
+.carousel.projects {
+  padding-bottom: 40px;
+}
+
 .content-wrap-projects {
   display: block !important;
 }
@@ -23,6 +27,48 @@
 
 .content-caroussel.projects {
   margin-top: 60px;
+}
+
+.project-content {
+  & h3 {
+    font-size: 16px;
+    font-family: "NeueMontreal-Regular";
+  }
+  & .separator {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  & h4 {
+    font-size: 13px;
+    font-family: "NeueMontreal-Italic";
+    font-weight: 300;
+    margin-top: -8px;
+    margin-bottom: 20px;
+  }
+  & h5 {
+    font-size: 13px;
+    padding: 10px 0;
+    font-family: "NeueMontreal-Regular";
+    & a {
+      color: var(--main-color);
+      font-family: "NeueMontreal-Italic";
+    }
+  }
+  & p {
+    font-size: 14px;
+    padding: 0 0 20px 0;
+  }
+  & ul {
+    padding-bottom: 20px;
+    & li {
+      font-family: "NeueMontreal-Light";
+      font-size: 15px;
+      margin: 5px 0 5px 20px;
+      list-style-type: circle;
+    }
+  }
 }
 
 .project-details {
