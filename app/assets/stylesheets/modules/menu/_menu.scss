@@ -7,12 +7,11 @@
 }
 
 .menu-nav {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
   height: 80vh;
   & ul {
     max-width: 60%;
@@ -25,11 +24,9 @@
     & li {
       display: inline-block;
       position: relative;
-      z-index: 10;
       margin-right: 1em;
       & .gallery-link {
         display: inline-block;
-        z-index: 10;
         & span {
           cursor: pointer;
           display: inline-block;
@@ -69,5 +66,18 @@
     object-fit: cover;
     position: relative;
     transition: transform 0.4s ease-out;
+  }
+}
+
+.hover-reveal.web {
+  width: 400px;
+  height: 300px;
+  border-radius: 50px;
+  overflow: visible;
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
   }
 }
