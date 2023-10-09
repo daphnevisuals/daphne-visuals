@@ -1,5 +1,6 @@
 .project-cover {
-  max-width: 60vw;
+  max-width: 70vw;
+  margin: 0 auto;
 }
 
 .carousel.projects {
@@ -12,7 +13,7 @@
 
 .content-container.projects {
   align-items: flex-start;
-  max-width: 60vw;
+  max-width: 70vw;
 }
 
 .carousel.projects {
@@ -30,47 +31,47 @@
 }
 
 .project-content {
-  & h3 {
-    font-size: 16px;
-    font-family: "NeueMontreal-Regular";
-  }
-  & .separator {
-    height: 2px;
-    width: 100%;
-    background-color: white;
-    margin-bottom: 20px;
-  }
   & h4 {
-    font-size: 13px;
-    font-family: "NeueMontreal-Italic";
-    font-weight: 300;
-    margin-top: -8px;
-    margin-bottom: 20px;
-  }
-  & h5 {
-    font-size: 13px;
-    padding: 10px 0;
-    font-family: "NeueMontreal-Regular";
-    & a {
-      color: var(--main-color);
-      font-family: "NeueMontreal-Italic";
-    }
+    font-size: 80px;
+    font-weight: 100;
+    color: var(--main-color);
+    font-family: "Migra-ExtralightItalic";
   }
   & p {
     font-size: 14px;
     padding: 0 0 20px 0;
-  }
-  & ul {
-    padding-bottom: 20px;
-    & li {
-      font-family: "NeueMontreal-Light";
-      font-size: 15px;
-      margin: 5px 0 5px 20px;
-      list-style-type: circle;
+    &.project-description {
+      font-size: 30px;
+      line-height: 1.5em;
+      margin-bottom: 20px;
+    }
+    &.project-tasks {
+      font-size: 20px;
+      padding: 20px;
+    }
+    &.project-link {
+      text-align: center;
+      font-family: "NeueMontreal-Regular";
+      line-height: 3em;
+      & a {
+        color: var(--main-color);
+        font-size: 30px;
+        padding: 0 15px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: white;
+        }
+      }
     }
   }
 }
 
 .project-details {
   font-size: 12px;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
