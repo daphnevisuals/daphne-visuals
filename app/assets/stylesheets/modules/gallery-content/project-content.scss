@@ -4,6 +4,7 @@
 }
 
 .carousel.projects {
+  margin-top: 60px;
   padding-bottom: 40px;
 }
 
@@ -26,16 +27,17 @@
   top: 50%;
 }
 
-.content-caroussel.projects {
-  margin-top: 60px;
-}
-
 .project-content {
   & h4 {
     font-size: 80px;
     font-weight: 100;
     color: var(--main-color);
     font-family: "Migra-ExtralightItalic";
+  }
+  & ul li {
+    list-style-type: circle;
+    margin-left: 15px;
+    padding: 3px 0;
   }
   & p {
     font-size: 14px;

@@ -23,8 +23,8 @@
 
       <!-- ITEM 03 -->
       <li>
-        <div class="gallery-link" data-category="mutomuto">
-          <span>MutoMuto,</span>
+        <div class="gallery-link" data-category="lematin">
+          <span>lematin.ch,</span>
           <div class="hover-reveal web image03">
             <%= cl_image_tag("Photography/menu/menu-portraits_aibovw", class: "hidden-img", loading: "lazy") %>
           </div>
@@ -54,24 +54,37 @@
 
       <div class="carousel projects d-none" data-category="farmland">
         <div class="project-content">
-          <div class="project-cover">
-            <%= cl_image_tag("web-projects/farmland/farmland_portfolio_u8m23n", width: 1200, height: 700, crop: :fill) %>
-
-          </div>
-          <h3>Farmland – UI/UX, Front-End, Back-End</h3>
-          <h4>Projet fictif réalisé en anglais, dans le cadre de ma formation en développement web chez Le Wagon (équipe, 2 semaines)</h4>
-          <h5>Découvrez le wireframe, la maquette et le prototype sur <a href="">behance</a>
-           </br> Retrouvez le code, disponible sur <a href="">github</a></h4>
-          <p>Farmland permet à ses utilisateurs de commander des produits frais directement auprès des fermes locales et de les récupérer à l'aide d'un système de covoiturage, tout en réduisant ses émissions carbone.
+          <h4>Farmland</h4>
+          <p class="project-description">Farmland permet à ses utilisateurs de commander des produits frais directement
+            auprès des fermes locales et de les récupérer à l'aide d'un système de covoiturage, tout en réduisant ses émissions carbone.
+            Mon rôle dans ce projet était de designer et développer l'application (front et back),
+            dans une équipe de quatre développeurs.
           </p>
-
+          <div class="project-cover">
+            <%= cl_image_tag("web-projects/farmland/fylmsgpcfnywegnkymhc") %>
+          </div>
+          <div class="project-info">
+            <div class="project-tools">
+              <p>Figma</br>
+              HTML/CSS/JS, GSAP, Ruby, Ruby on Rails, Progresql</br>
+              Le Wagon - 2023</p>
+            </div>
+            <p class="project-link">
+              Accédez au projet complet via </br> <a href=""><i class="fa-brands fa-behance"></i></a>
+              <a href=""><i class="fa-brands fa-github"></i></a>
+            </p>
+          </div>
         </div>
+      </div>
       </div>
 
       <div class="carousel projects d-none" data-category="noway">
         <div class="project-content">
           <h4>No Way</h4>
-          <p class="project-description">No Way est une plateforme en ligne informative et préventive sur la thématique du consentement sexuel. Elle propose du contenu d'articles de presse, une FAQ, des statistiques, une cellule d'urgence ainsi qu'un espace de témoignage dédié aux victimes de harcèlement.</p>
+          <p class="project-description">No Way est une plateforme en ligne informative et préventive sur la thématique du
+            consentement sexuel. Elle propose du contenu d'articles de presse, une FAQ, des statistiques, une cellule d'urgence
+            ainsi qu'un espace de témoignage dédié aux victimes de harcèlement.
+          </p>
           <div class="project-cover">
 
             <%= cl_image_tag("web-projects/noway/noway-banner_ejypoc")
@@ -79,13 +92,15 @@
             <%= cl_video_tag("web-projects/noway/NoWaywebsite_m2bxnh.mp4",
                                 :loop => true, :controls => true, :fallback_content => "Your browser does not support HTML5 video tags." )
             %>
-            <p class="project-tasks">Processus de travail : </br>
-            1. Communication/Marketing (recherches, analyse)</br>
-2. Développer des intentions visuelles et une identité graphique </br>
-3. Rédaction web, wording (chatgpt, témoignages réels repris de "non-c-non.ch")</br>
-4. Wireframing, maquettage, prototypage, user testing (desktop]</br>
-5. Intégrer le site sur wordpress (coder le front, créer un template en utilisant Twig</br>
-6. Réaliser un mur et deux stories Instagram pour promouvoir No Way</p>
+            <p class="project-tasks">Processus de travail :</p>
+            <ul>
+              <li>Communication/Marketing (recherches, analyse)</li>
+              <li>Développer des intentions visuelles et une identité graphique </li>
+              <li>Rédaction web, wording (chatgpt, témoignages réels repris de "non-c-non.ch")</li>
+              <li>Wireframing, maquettage, prototypage, user testing (desktop)</li>
+              <li>Intégrer le site sur wordpress (développement front, créer un template WP)</li>
+              <li>Réaliser un mur et deux stories Instagram pour promouvoir No Way</li>
+            </ul>
             <%= cl_image_tag("web-projects/noway/behancepostpart3_ucdslg")
             %>
 
@@ -103,17 +118,21 @@
         </div>
       </div>
 
-      <div class="carousel projects d-none" data-category="mutomuto">
-        Mutomuto content
+      <div class="carousel projects d-none" data-category="lematin">
+        lematin content
       </div>
 
       <div class="carousel projects d-none" data-category="pikpik">
        <div class="project-content">
           <h4>Pik-Pik</h4>
-          <p class="project-description">Marie et Chen lancent leur nouvelle aventure culinaire avec la marque Pik-Pik, se voulant artisanale,
-            locale et totalement décalée. Sur ce projet d'étude fictif, mon rôle fut de créer des étiquettes pour leurs bouteilles, de designer et développer leur page web vitrine.</p>
+          <p class="project-description">Marie et Chen lancent leur nouvelle aventure culinaire avec la marque Pik-Pik,
+            se voulant artisanale,locale et totalement décalée. Sur ce projet d'étude fictif, mon rôle fut de créer des
+            étiquettes pour leurs bouteilles, de designer et développer leur page web vitrine.
+          </p>
           <div class="project-cover">
-            <%= cl_image_tag("web-projects/pikpik/pikpik_mockup_kji6jx") %>
+            <%= cl_video_tag("web-projects/pikpik/osjw0bnjrogrhqu21mnr.mp4",
+                                :loop => true, :controls => true, :fallback_content => "Your browser does not support HTML5 video tags." )
+            %>
             <%= cl_image_tag("web-projects/pikpik/pikpik_bouteilles_krymo4") %>
           </div>
           <div class="project-info">
@@ -134,8 +153,8 @@
           Farmland
         </li>
         <li class="content-menu__link" data-category="noway">No Way</li>
-        <li class="content-menu__link" data-category="mutomuto">
-          MutoMuto
+        <li class="content-menu__link" data-category="lematin">
+          lematin
         </li>
         <li class="content-menu__link" data-category="pikpik">
           PikPik
