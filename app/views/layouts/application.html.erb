@@ -10,8 +10,8 @@
     <%= javascript_importmap_tags %>
 
   </head>
-
-<body class="homepage-bg">
+  <% if request.fullpath == root_path || request.fullpath == photography_path || request.fullpath == webdesign_path %>
+    <body class="homepage-bg">
 
 
       <%= render "shared/navbar_black" %>
@@ -23,5 +23,19 @@
       <% end %>
 
     </body>
+    <% else %>
+    <body class="homepage-bg about">
+
+
+      <%= render "shared/navbar_black" %>
+      <%= yield %>
+      <% if request.fullpath == root_path && !session[:preloader_played] %>
+          <%= render "shared/preloader" %>
+          <% session[:preloader_played] = true %>
+
+      <% end %>
+
+    </body>
+  <% end %>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </html>
