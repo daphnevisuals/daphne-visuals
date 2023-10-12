@@ -1,4 +1,5 @@
 <div class="menu" data-controller="menu">
+
   <nav class="menu-nav">
     <ul id="gallery-links">
       <!-- ITEM 01 -->
@@ -26,7 +27,7 @@
         <div class="gallery-link" data-category="lematin">
           <span>lematin.ch,</span>
           <div class="hover-reveal web image03">
-            <%= cl_image_tag("Photography/menu/menu-portraits_aibovw", class: "hidden-img", loading: "lazy") %>
+            <%= cl_image_tag("web-projects/lematin/g9o4asaggfctyh2bgulw", class: "hidden-img", loading: "lazy") %>
           </div>
         </div>
       </li>
@@ -119,7 +120,28 @@
       </div>
 
       <div class="carousel projects d-none" data-category="lematin">
-        lematin content
+        <div class="project-content">
+          <h4>lematin.ch</h4>
+          <p class="project-description">LeMatin est un site internet de presse Suisse. Pour ce projet d'étude fictif, j'ai redesigné
+            et développé (front) une nouvelle version pour le site.
+          </p>
+          <div class="project-cover">
+            <%= cl_video_tag("web-projects/lematin/gm8n1h3fr7ii6wrxxcrc.mp4",
+                                :loop => true, :controls => true, :fallback_content => "Your browser does not support HTML5 video tags." )
+            %>
+          </div>
+          <div class="project-info">
+            <div class="project-tools">
+              <p>Figma</br>
+              HTML/CSS/JS</br>
+              eikon - 2022</p>
+            </div>
+            <p class="project-link">
+              Accédez au projet complet via </br> <a href=""><i class="fa-brands fa-behance"></i></a>
+              <a href=""><i class="fa-brands fa-github"></i></a>
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="carousel projects d-none" data-category="pikpik">
@@ -154,7 +176,7 @@
         </li>
         <li class="content-menu__link" data-category="noway">No Way</li>
         <li class="content-menu__link" data-category="lematin">
-          lematin
+          lematin.ch
         </li>
         <li class="content-menu__link" data-category="pikpik">
           PikPik

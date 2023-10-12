@@ -20,7 +20,11 @@
         </li>
       </ul>
       <ul class="navbar-right">
-        <li><a class="link link-nav" href="">Info</a></li>
+        <li>
+          <%= link_to about_path, class:"link link-nav" do %>
+            A propos & Contact
+          <% end %>
+        </li>
         <li><a class="link link-nav" href="">Contact</a></li>
       </ul>
     </div>

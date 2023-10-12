@@ -17,6 +17,10 @@
     font-size: 13px;
     padding: 0.15em;
     text-transform: lowercase;
+    & a {
+      color: var(--main-color);
+      text-transform: uppercase;
+    }
   }
   img {
     width: 80%;

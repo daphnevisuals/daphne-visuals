@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "pages#home"
   get "about", to: "pages#about"
-  get "contact", to: "pages#contact"
   get "photography", to: "pages#photography"
   get "webdesign", to: "pages#webdesign"
   get "preloader", to: "pages#preloader"

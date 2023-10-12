@@ -1,9 +1,12 @@
 .menu {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 0;
+  gap: 50px;
   overflow: hidden;
+  height: 80vh;
 }
 
 .menu-nav {
@@ -12,7 +15,6 @@
   justify-content: center;
   align-items: center;
   overflow: visible;
-  height: 80vh;
   & ul {
     max-width: 60%;
     margin: 0 auto;
