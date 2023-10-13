@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsPortfolio</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= meta_title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Get your farm-fresh products directly from local farms, even if you don't have a car. Carpool, reduce your CO2 emissions and enjoy the best local produce !" content="<%= meta_description %>">
+    <%= favicon_link_tag "grey-flower.svg", rel: "icon", type: "image/svg" %>
+     <%# <%=# favicon_link_tag "favicon.ico", rel: "icon", type: "image/ico" %>
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <%# <meta property="og:image" content="<%= meta_image %>
+    <meta property="og:description" content="<%= meta_description %>">
+    <meta property="og:site_name" content="<%= meta_title %>">
+
+    <!-- Twitter Card data -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-
   </head>
 
 <body class="homepage-bg">
-
-
-      <%= render "shared/navbar_black" %>
-      <%= yield %>
-      <% if request.fullpath == root_path && !session[:preloader_played] %>
-          <%= render "shared/preloader" %>
-          <% session[:preloader_played] = true %>
-
-      <% end %>
-
-    </body>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <%= render "shared/navbar_black" %>
+  <%= yield %>
+  <% if request.fullpath == root_path && !session[:preloader_played] %>
+      <%= render "shared/preloader" %>
+      <% session[:preloader_played] = true %>
+  <% end %>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </html>
