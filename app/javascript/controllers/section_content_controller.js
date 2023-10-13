@@ -16,7 +16,6 @@ export default class extends Controller {
         );
         const documentBody = document.querySelector("body");
         documentBody.classList.add("black-bg");
-        console.log(documentBody);
         const menu = document.querySelector(".menu");
         menu.classList.add("d-none");
         contentWrapper.classList.remove("d-none");
