@@ -1,11 +1,21 @@
 .tools {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 20px;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 100px;
-  margin-top: 60px;
-  text-align: center;
+  @media (min-width: 576px) {
+    flex-direction: row;
+    gap: 40px;
+    width: 80vw;
+    margin: 50px auto;
+  }
+  @media (min-width: 768px) {
+    gap: 70px;
+  }
+
   h2 {
     text-transform: uppercase;
     font-family: "NeueMontreal-Regular";
@@ -23,6 +33,7 @@
     }
   }
   img {
-    width: 80%;
+    width: 50%;
+    margin: 0 auto;
   }
 }
