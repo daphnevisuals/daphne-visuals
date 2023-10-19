@@ -5,6 +5,9 @@
   &.black-color {
     color: var(--black-color);
   }
+  &.white-color {
+    color: #fff;
+  }
 }
 
 .navbar-line {
@@ -15,6 +18,9 @@
   position: relative;
   &.black {
     background-color: var(--black-color);
+  }
+  &.white {
+    background-color: #fff;
   }
 }
 
