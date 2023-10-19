@@ -6,8 +6,6 @@ export default class extends Controller {
 
   connect() {}
   menu() {
-    console.log("button clicked");
-    console.log(this.toggleMenuTarget);
     this.toggleMenuTarget.classList.toggle("d-none");
   }
 }
