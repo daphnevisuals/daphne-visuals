@@ -2,25 +2,13 @@
   color: white;
   .content-navbar {
     display: flex;
+    justify-content: space-between;
   }
   .content-navbar-line {
     height: 5px;
     background-color: white;
     width: 100%;
     margin-bottom: 20px;
-  }
-  .navbar-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    padding-left: 60px;
-    & .navbar-right {
-      text-align: right;
-    }
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    font-size: 13px;
-    line-height: 1.7em;
   }
   .link::before,
   .link::after {
