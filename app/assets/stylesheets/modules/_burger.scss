@@ -2,4 +2,39 @@
   @media (min-width: 768px) {
     display: none;
   }
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+
+  .burger-line,
+  .burger-line::before,
+  .burger-line::after {
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: var(--black-color);
+    transition: 0.4s;
+  }
+
+  .burger-line.white,
+  .burger-line.white::before,
+  .burger-line.white::after {
+    background-color: #fff;
+  }
+
+  .burger-line {
+    position: relative;
+    top: 8px;
+  }
+
+  .burger-line::before {
+    content: "";
+    top: -8px;
+  }
+
+  .burger-line::after {
+    content: "";
+    top: 8px;
+  }
 }
