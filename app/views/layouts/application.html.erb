@@ -24,7 +24,7 @@
   </head>
 
 <body class="homepage-bg">
-  <%= render "shared/navbar_black" %>
+  <%= render "shared/navbar" %>
   <%= yield %>
   <% if request.fullpath == root_path && !session[:preloader_played] %>
       <%= render "shared/preloader" %>
