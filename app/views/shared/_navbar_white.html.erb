@@ -1,41 +1,16 @@
 
-<div class="content-navbar-line"></div>
-<div class="content-navbar">
-  <div class="logo">
-        <%= link_to root_path do %>
-        Daphné Visuals
-        <% end %>
-  </div>
-  <div class="navbar-wrapper">
-    <ul>
-      <li>
-        <%= link_to webdesign_path, class:"link link-nav" do %>
-            Developpement Web | UI/UX Design
-        <% end %>
-      </li>
-      <li>
-        <%= link_to photography_path, class:"link link-nav" do %>
-          Photographie
-        <% end %>
-      </li>
-    </ul>
-    <ul class="navbar-right">
-      <li>
-        <%= link_to about_path, class:"link link-nav" do %>
-          A propos & Contact
-        <% end %>
-      </li>
-    </ul>
-  </div>
-  <div data-controller="burger">
-    <div data-action="click->burger#menu"  class="burger-button" data-burger-target="burgerAnimation">
-      <div class="burger-line white"></div>
+  <div class="content-navbar-line"></div>
+  <div class="content-navbar">
+    <div class="logo">
+          <%= link_to root_path do %>
+          Daphné Visuals
+          <% end %>
     </div>
-    <div class="d-none" data-burger-target="toggleMenu">
+    <div class="navbar-wrapper">
       <ul>
         <li>
           <%= link_to webdesign_path, class:"link link-nav" do %>
-            Developpement Web | UI/UX Design
+              Developpement Web | UI/UX Design
           <% end %>
         </li>
         <li>
@@ -43,6 +18,8 @@
             Photographie
           <% end %>
         </li>
+      </ul>
+      <ul class="navbar-right">
         <li>
           <%= link_to about_path, class:"link link-nav" do %>
             A propos & Contact
@@ -50,5 +27,28 @@
         </li>
       </ul>
     </div>
-  </div>
+    <div data-controller="burger">
+      <div data-action="click->burger#menu"  class="burger-button" data-burger-target="burgerAnimation">
+        <div class="burger-line white"></div>
+      </div>
+      <div class="d-none" data-burger-target="toggleMenu">
+        <ul>
+          <li>
+            <%= link_to webdesign_path, class:"link link-nav" do %>
+              Developpement Web | UI/UX Design
+            <% end %>
+          </li>
+          <li>
+            <%= link_to photography_path, class:"link link-nav" do %>
+              Photographie
+            <% end %>
+          </li>
+          <li>
+            <%= link_to about_path, class:"link link-nav" do %>
+              A propos & Contact
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
 </div>

@@ -6,6 +6,10 @@
   height: 20px;
   cursor: pointer;
   transition: 0.4s;
+  z-index: 999;
+  position: absolute;
+  top: 43px;
+  right: 40px;
 
   .burger-line,
   .burger-line::before,
@@ -51,4 +55,14 @@
 .burger-button.animate .burger-line::after {
   top: 0;
   transform: rotate(-45deg);
+}
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 888;
+  background-color: red;
 }

@@ -1,6 +1,6 @@
 <header>
-  <div class="home-navbar-line"></div>
-  <div class="home-navbar">
+  <div class="navbar-line black"></div>
+  <div class="navbar black">
     <div class="logo">
           <%= link_to root_path do %>
           Daphné Visuals
@@ -32,23 +32,25 @@
         <div data-burger-target="burgerAnimation" class="burger-line"></div>
       </div>
       <div class="d-none" data-burger-target="toggleMenu">
-        <ul>
-          <li>
-            <%= link_to webdesign_path, class:"link link-nav" do %>
-              Developpement Web | UI/UX Design
-            <% end %>
-          </li>
-          <li>
-            <%= link_to photography_path, class:"link link-nav" do %>
-              Photographie
-            <% end %>
-          </li>
-          <li>
-            <%= link_to about_path, class:"link link-nav" do %>
-              A propos & Contact
-            <% end %>
-          </li>
-        </ul>
+        <div class="burger-menu">
+          <ul>
+            <li>
+              <%= link_to webdesign_path, class:"link link-nav" do %>
+                Developpement Web | UI/UX Design
+              <% end %>
+            </li>
+            <li>
+              <%= link_to photography_path, class:"link link-nav" do %>
+                Photographie
+              <% end %>
+            </li>
+            <li>
+              <%= link_to about_path, class:"link link-nav" do %>
+                A propos & Contact
+              <% end %>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
