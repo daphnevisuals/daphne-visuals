@@ -37,4 +37,17 @@
     content: "";
     top: 8px;
   }
+  .burger-button.active {
+    .burger-line {
+      background: transparent;
+    }
+    .burger-line::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    .burger-line::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
 }

@@ -27,8 +27,29 @@
         </li>
       </ul>
     </div>
-    <div data-controller="burger" class="burger-button">
-      <div class="burger-line"></div>
+    <div data-controller="burger">
+      <div data-action="click->burger#menu"  class="burger-button">
+        <div class="burger-line"></div>
+      </div>
+      <div class="d-none" data-burger-target="toggleMenu">
+        <ul>
+          <li>
+            <%= link_to webdesign_path, class:"link link-nav" do %>
+              Developpement Web | UI/UX Design
+            <% end %>
+          </li>
+          <li>
+            <%= link_to photography_path, class:"link link-nav" do %>
+              Photographie
+            <% end %>
+          </li>
+          <li>
+            <%= link_to about_path, class:"link link-nav" do %>
+              A propos & Contact
+            <% end %>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
