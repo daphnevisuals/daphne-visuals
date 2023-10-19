@@ -57,6 +57,8 @@ body {
 header {
   padding: 20px 40px;
   height: 110px;
+  position: relative;
+  z-index: 888;
 }
 
 a {
