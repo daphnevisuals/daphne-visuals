@@ -4,9 +4,7 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ["toggleMenu", "burgerAnimation"];
 
-  connect() {
-    console.log(this.burgerAnimationTarget);
-  }
+  connect() {}
   menu() {
     this.toggleMenuTarget.classList.toggle("d-none");
     this.burgerAnimationTarget.classList.toggle("animate");

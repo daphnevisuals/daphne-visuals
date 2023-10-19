@@ -2,14 +2,25 @@
   display: flex;
   justify-content: space-between;
   font-family: "NeueMontreal-Light";
+  &.black-color {
+    color: var(--black-color);
+  }
+  &.white-color {
+    color: #fff;
+  }
 }
 
 .navbar-line {
   height: 5px;
   width: 100%;
   margin-bottom: 20px;
+  z-index: 999;
+  position: relative;
   &.black {
     background-color: var(--black-color);
+  }
+  &.white {
+    background-color: #fff;
   }
 }
 

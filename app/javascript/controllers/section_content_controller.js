@@ -10,17 +10,33 @@ export default class extends Controller {
     // Make section appear
     links.forEach((linkItem) => {
       linkItem.addEventListener("click", (e) => {
+        // making white navbar
+        const navbarLine = document.querySelector(".navbar-line");
+        navbarLine.classList.remove("black");
+        navbarLine.classList.add("white");
+
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.remove("black-color");
+        navbar.classList.add("white-color");
+
+        const burgerLines = document.querySelector(".burger-line");
+        burgerLines.classList.add("white");
+
+        // Making projects appear when I click on respective link
         const contentWrapper = document.querySelector(".content-wrap");
         const contentProjectWrapper = document.querySelector(
           ".content-wrap.projects"
         );
         const documentBody = document.querySelector("body");
         documentBody.classList.add("black-bg");
+
         const menu = document.querySelector(".menu");
         menu.classList.add("d-none");
+
         contentWrapper.classList.remove("d-none");
         contentProjectWrapper.classList.add("content-wrap-projects");
         contentProjectWrapper.classList.remove(".d-none");
+
         const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
         tl.fromTo(
           ".content-wrap",
