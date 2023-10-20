@@ -1,7 +1,11 @@
+.burger,
 .burger-button {
   @media (min-width: 768px) {
     display: none;
   }
+}
+
+.burger-button {
   width: 30px;
   height: 20px;
   cursor: pointer;
@@ -50,11 +54,13 @@
 .burger-button.animate .burger-line::before {
   top: 0;
   transform: rotate(45deg);
+  background-color: #fff;
 }
 
 .burger-button.animate .burger-line::after {
   top: 0;
   transform: rotate(-45deg);
+  background-color: #fff;
 }
 
 .burger-menu {
@@ -64,5 +70,23 @@
   height: 100vh;
   width: 100vw;
   z-index: 888;
-  background-color: red;
+  background-color: var(--black-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.burger-menu ul li {
+  padding: 10px 0;
+  & a {
+    font-family: "Migra-Regular";
+    font-weight: 400;
+    font-size: 5vw;
+    color: white;
+    transition: 0.4s ease-in-out;
+    &:hover {
+      color: var(--main-color);
+    }
+  }
 }
