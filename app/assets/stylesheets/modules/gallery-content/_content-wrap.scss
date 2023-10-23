@@ -1,9 +1,7 @@
 .content-wrap {
   padding: 20px 40px;
-  height: calc(100vh);
+  height: calc(100vh - 110px);
   width: 100vw;
-  position: absolute;
-  top: 0;
   color: white;
   display: flex;
   flex-direction: column;
