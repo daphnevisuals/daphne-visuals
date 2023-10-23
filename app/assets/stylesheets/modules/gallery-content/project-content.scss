@@ -1,5 +1,8 @@
 .project-cover {
   max-width: 70vw;
+  @media (max-width: 768px) {
+    max-width: 90vw;
+  }
   margin: 0 auto;
 }
 
@@ -26,6 +29,10 @@
 
 .content-container.projects {
   align-items: flex-start;
+  @media (max-width: 768px) {
+    max-width: 90vw;
+    align-items: center;
+  }
   max-width: 70vw;
 }
 
@@ -43,25 +50,44 @@
 
 .project-content {
   & h4 {
+    @media (max-width: 768px) {
+      display: none;
+    }
     font-size: 80px;
     font-weight: 100;
     color: var(--main-color);
     font-family: "Migra-ExtralightItalic";
   }
-  & ul li {
-    list-style-type: circle;
-    margin-left: 15px;
-    padding: 3px 0;
+  & ul {
+    @media (max-width: 768px) {
+      padding: 20px 0;
+    }
+    & li {
+      list-style-type: circle;
+      margin-left: 15px;
+      padding: 3px 0;
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
   }
   & p {
     font-size: 14px;
     padding: 0 0 20px 0;
     &.project-description {
+      @media (max-width: 768px) {
+        font-size: 15px;
+        line-height: 1.3em;
+      }
       font-size: 30px;
       line-height: 1.5em;
       margin-bottom: 20px;
     }
     &.project-tasks {
+      @media (max-width: 768px) {
+        font-size: 18px;
+        padding: 20px 10px;
+      }
       font-size: 20px;
       padding: 20px;
     }
@@ -88,6 +114,13 @@
 
 .project-info {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
 }
