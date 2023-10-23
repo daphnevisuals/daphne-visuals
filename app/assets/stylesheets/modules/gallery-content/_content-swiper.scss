@@ -1,13 +1,17 @@
 // @import "node_modules/swiper/swiper";
 // @import "node_modules/swiper/components/effect-fade/effect-fade";
 
-.swiper {
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: visible !important;
-}
+// STYLES INJECTED IN HTML
+// .swiper {
+//   @media (min-width: 768px) {
+//     width: 50vw;
+//   }
+//   width: 90vw;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   overflow: visible !important;
+// }
 
 .swiper-wrapper {
   display: flex;

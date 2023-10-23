@@ -8,8 +8,20 @@
   padding-bottom: 40px;
 }
 
+.content-wrap.projects {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+  display: flex;
+  height: 100%;
+  flex-direction: column-reverse;
+}
+
 .content-wrap-projects {
-  display: block !important;
+  @media (min-width: 768px) {
+    display: block !important;
+  }
 }
 
 .content-container.projects {
@@ -22,9 +34,11 @@
 }
 
 .content-menu.projects {
-  position: fixed;
-  right: 40px;
-  top: 50%;
+  @media (min-width: 768px) {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+  }
 }
 
 .project-content {

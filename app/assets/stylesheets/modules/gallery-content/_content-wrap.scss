@@ -9,13 +9,23 @@
 }
 
 .content-container {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70vh;
+    margin: auto 0;
+    align-items: center;
+  }
   display: flex;
-  justify-content: space-between;
-  height: 70vh;
-  margin: auto 0;
+  flex-direction: column-reverse;
+  gap: 30px;
+  justify-content: center;
   align-items: center;
 }
 
 .carousel {
-  margin-left: 20vh;
+  @media (min-width: 768px) {
+    margin-left: 10vh;
+  }
 }
