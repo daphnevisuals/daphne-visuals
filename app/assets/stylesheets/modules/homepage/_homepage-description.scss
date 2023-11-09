@@ -19,7 +19,8 @@ main {
   h1 {
     font-family: "Migra-ExtralightItalic";
     font-weight: 100;
-    color: rgba(237, 169, 148, 0.28);
+    color: var(--main-color);
+    opacity: 0.6;
     width: 100%;
     font-size: 8vw;
     @media (min-width: 375px) {

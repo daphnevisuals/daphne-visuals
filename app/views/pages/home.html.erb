@@ -11,6 +11,23 @@
     </p>
   </div>
   <div class="tools">
+  <div class="tools-dev">
+      <h2>Design et dev tools</h2>
+      <ul>
+        <li>UI/UX - Figma, Sketch</li>
+        <li>Adobe suite</li>
+        <li>Ruby, Ruby on Rails, SQL, Active Record</li>
+        <li>HTML, SCSS, JS, stimulus js, gsap, VueJS</li>
+        <li>
+          <%= link_to webdesign_path, class:"link link-nav" do %>
+            Sélection de projets web
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="tools-icon">
+      <%= image_tag "grey-flower.svg", alt: "Flower Icon" %>
+    </div>
     <div class="tools-photography">
       <h2>Matériel photo</h2>
       <ul>
@@ -21,23 +38,6 @@
         <li>
           <%= link_to photography_path, class:"link link-nav" do %>
             Galerie photo
-          <% end %>
-        </li>
-      </ul>
-    </div>
-    <div class="tools-icon">
-      <%= image_tag "grey-flower.svg", alt: "Flower Icon" %>
-    </div>
-    <div class="tools-dev">
-      <h2>Design et dev tools</h2>
-      <ul>
-        <li>UI/UX - Figma, Sketch</li>
-        <li>Adobe suite</li>
-        <li>Ruby, Ruby on Rails, SQL, Active Record</li>
-        <li>HTML, SCSS, JS, stimulus js, gsap, VueJS</li>
-        <li>
-          <%= link_to webdesign_path, class:"link link-nav" do %>
-            Sélection de projets web
           <% end %>
         </li>
       </ul>

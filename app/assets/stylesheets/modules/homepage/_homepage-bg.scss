@@ -8,7 +8,7 @@
   height: 100%;
   background-image: url("noise.gif");
   filter: grayscale(100%);
-  opacity: 0.02;
+  opacity: 0.025;
   pointer-events: none;
   z-index: -1; /* Mettre un z-index négatif pour que le bruit soit en arrière-plan */
 }
